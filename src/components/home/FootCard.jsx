@@ -25,7 +25,7 @@ const FootCard = ({ item }) => {
     <div
       onClick={() => handleAddToCart(item)}
       key={item.id}
-      className="w-[200px] hover:scale-105 transition-all ease-in-out duration-00 h-[230px] mt-[62px] relative px-6 pb-6 bg-[#1F1D2B] rounded-2xl flex justify-center text-center items-center flex-col"
+      className="w-[200px] hover:scale-105 transition-all ease-in-out duration-500 cursor-pointer h-[230px] mt-[62px] relative px-6 pb-6 bg-[#1F1D2B] rounded-2xl flex justify-center text-center items-center flex-col"
     >
       <img
         src={item.img}
