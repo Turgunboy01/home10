@@ -14,77 +14,85 @@ const FootList = ({
   clickSlect,
   search,
 }) => {
-  const filterProduct = products.filter((fil) =>
+  const searchProduct = products.filter((fil) =>
     fil.name.toLowerCase().includes(search.toLowerCase())
   );
-  console.log(filterProduct);
 
+  const fill = searchProduct.filter((fil) => fil.category == tabList);
+  // console.log(fill);
+  // console.log(searchProduct);
+
+  const renderProduct = fill.length == 0 ? searchProduct : fill;
   return (
     <div className="">
       <div className="gap-8 flex mt-6 pb-4 ">
         <h3
           className={`text-[14px] font-semibold  cursor-pointer ${
-            tabList === 0 ? "text-[#EA7C69] " : "text-[#fff]"
+            tabList === "Hot Dishes" ? "text-[#EA7C69] " : "text-[#fff]"
           }`}
-          onClick={() => setTabList(0)}
+          onClick={() => setTabList("Hot Dishes")}
         >
           Hot Dishes
         </h3>
         <h3
           className={`text-[14px] font-semibold cursor-pointer  ${
-            tabList === 1 ? "text-[#EA7C69] " : "text-[#fff]"
+            tabList === "Cold Dishes" ? "text-[#EA7C69] " : "text-[#fff]"
           }`}
-          onClick={() => setTabList(1)}
+          onClick={() => setTabList("Cold Dishes")}
         >
           Cold Dishes
         </h3>
         <h3
           className={`text-[14px] font-semibold  cursor-pointer ${
-            tabList === 2 ? "text-[#EA7C69] " : "text-[#fff]"
+            tabList === "Soup" ? "text-[#EA7C69] " : "text-[#fff]"
           }`}
-          onClick={() => setTabList(2)}
+          onClick={() => setTabList("Soup")}
         >
           Soup
         </h3>
         <h3
           className={`text-[14px] font-semibold  cursor-pointer ${
-            tabList === 3 ? "text-[#EA7C69] " : "text-[#fff]"
+            tabList === "Grill" ? "text-[#EA7C69] " : "text-[#fff]"
           }`}
-          onClick={() => setTabList(3)}
+          onClick={() => setTabList("Grill")}
         >
           Grill
         </h3>
         <h3
           className={`text-[14px] font-semibold cursor-pointer  ${
-            tabList === 4 ? "text-[#EA7C69] " : "text-[#fff]"
+            tabList === "Appetizer" ? "text-[#EA7C69] " : "text-[#fff]"
           }`}
-          onClick={() => setTabList(4)}
+          onClick={() => setTabList("Appetizer")}
         >
           Appetizer
         </h3>
         <h3
           className={`text-[14px] font-semibold cursor-pointer  ${
-            tabList === 5 ? "text-[#EA7C69]  " : "text-[#fff]"
+            tabList === "Dessert" ? "text-[#EA7C69]  " : "text-[#fff]"
           }`}
-          onClick={() => setTabList(5)}
+          onClick={() => setTabList("Dessert")}
         >
           Dessert
         </h3>
       </div>
       <div className="w-full h-[2px] bg-[#393C49] mt-[-2px] relative">
         <span
-          className={`absolute w-[37px] h-[5px] mt-[-1px] bg-[red] rounded-full ${
-            tabList == 0
+          className={`absolute w-[37px] h-[5px] mt-[-1px] transition-all ease-in-out duration-500 bg-[#EA7C69] rounded-full ${
+            tabList == ""
+              ? "left-[0] w-0"
+              : tabList == "Hot Dishes"
               ? "left-[0]"
-              : tabList == 1
+              : tabList == "Cold Dishes"
               ? "left-[105px]"
-              : tabList == 2
+              : tabList == "Soup"
               ? "left-[217px]"
-              : tabList == 3
+              : tabList == "Grill"
               ? "left-[285px]"
-              : tabList == 4
+              : tabList == "Appetizer"
               ? "left-[345px]"
-              : "left-[442px]"
+              : tabList == "Dessert"
+              ? "left-[442px]"
+              : "left-0"
           } `}
         ></span>
       </div>
@@ -141,7 +149,7 @@ const FootList = ({
         </div>
       </div>
       <div className=" flex flex-wrap justify-between scrolDiv h-[75vh] overflow-y-scroll">
-        {filterProduct.map((item) => (
+        {renderProduct.map((item) => (
           <FootCard item={item} />
         ))}
       </div>

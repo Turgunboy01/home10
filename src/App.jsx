@@ -5,7 +5,7 @@ import Card from "./components/card/Card";
 import Payment from "./components/card/Payment";
 
 const App = () => {
-  const [selectedOption, setSelectedOption] = useState("Dine In");
+  const [selectedOption, setSelectedOption] = useState("Select..");
   const [clickSlect, setClickSlect] = useState(false);
   const [paymentClick, setPaymentClick] = useState(false);
   const [select2, setSelect2] = useState(false);
@@ -38,6 +38,7 @@ const App = () => {
           handleSelect={handleSelect}
           select2={select2}
           setSelect2={setSelect2}
+          paymentClick={paymentClick}
         />
       )}
     </div>

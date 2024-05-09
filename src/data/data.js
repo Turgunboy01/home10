@@ -42,6 +42,7 @@ export const products = [
     name: "Qovurilgan makaron",
     count: 5,
     price: 3.4,
+    category: "Dessert",
   },
   {
     id: 4,
@@ -57,6 +58,7 @@ export const products = [
     name: "Uygur lag'mon",
     count: 9,
     price: 2.6,
+    category: "Soup",
   },
   {
     id: 6,
@@ -128,6 +130,7 @@ export const products = [
     name: "Qovurilgan gosht 2",
     count: 7,
     price: 3.4,
+    category: "Appetizer",
   },
   {
     id: 15,
@@ -135,6 +138,7 @@ export const products = [
     name: "Shirinlik 2",
     count: 11,
     price: 3.7,
+    category: "Soup",
   },
 
   {
@@ -143,6 +147,7 @@ export const products = [
     name: "Koreski lag'mon",
     count: 4,
     price: 3.4,
+    category: "Dessert",
   },
   {
     id: 17,
@@ -150,6 +155,7 @@ export const products = [
     name: "Go'shli non",
     count: 9,
     price: 2.4,
+    category: "Soup",
   },
   {
     id: 18,

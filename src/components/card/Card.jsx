@@ -3,7 +3,7 @@ import ItemCard from "./ItemCard";
 import useCartStore from "../../context/useCart";
 
 const Card = ({ selectedOption, handleSelect, setPaymentClick }) => {
-  const { data, getCartTotal } = useCartStore();
+  const { data, getCartTotal, clearCard } = useCartStore();
   const [total, setTotal] = useState(0);
   useEffect(() => {
     const total = data.reduce((accumulator, currentItem) => {
@@ -71,6 +71,7 @@ const Card = ({ selectedOption, handleSelect, setPaymentClick }) => {
           <ItemCard item={item} />
         ))}
       </div>
+    
       <div className=" mt-5">
         <div className="flex justify-between">
           <h3 className="text-[16px] text-[#ABBBC2] font-normal">Discount</h3>

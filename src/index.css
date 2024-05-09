@@ -10,20 +10,47 @@ body {
 .sitebar {
   li {
     border-radius: 12px 0px 0px 12px;
-
+    position: relative;
     color: #ea7c69;
     .circleTop {
       transform: rotate(90deg);
     }
+    /* &::before {
+      content: "";
+      position: absolute;
+      border-top-right-radius: 30px;
+      background-color: #1f1d2b;
+      box-shadow: 0 -8px 0 0 #252836;
+      right: 0;
+      bottom: -20px;
+      width: 12px;
+      height: 10px;
+    } */
+    /* &::after {
+      content: "";
+      position: absolute;
+      box-shadow: 0 9px 0 0 #252836;
+      border-bottom-right-radius: 30px;
+      background-color: #1f1d2b;
+      right: 0;
+      top: -20px;
+      width: 12px;
+      height: 10px;
+    } */
     &:nth-child(2) {
       background-color: #252836;
       color: #fff;
       position: relative;
+      .icon {
+        background-color: #ea7c69;
+        box-shadow: 0px 4px 12px 0px rgba(234, 124, 105, 0.32);
+      }
       &::before {
         content: "";
         position: absolute;
         border-top-right-radius: 30px;
-        background-color: #140086;
+        background-color: #1f1d2b;
+        box-shadow: 0 -8px 0 0 #252836;
         right: 0;
         bottom: -20px;
         width: 12px;
@@ -32,16 +59,13 @@ body {
       &::after {
         content: "";
         position: absolute;
+        box-shadow: 0 9px 0 0 #252836;
         border-bottom-right-radius: 30px;
-        background-color: #1a00af;
+        background-color: #1f1d2b;
         right: 0;
         top: -20px;
         width: 12px;
         height: 20px;
-      }
-      .icon {
-        background-color: #ea7c69;
-        box-shadow: 0px 8px 24px 0px rgba(234, 124, 105, 0.32);
       }
     }
     &:hover {
@@ -49,7 +73,31 @@ body {
       .icon {
         background-color: #ea7c69;
         color: #fff;
-        box-shadow: 0px 8px 24px 0px rgba(234, 124, 105, 0.32);
+        box-shadow: 0px 4px 12px 0px rgba(234, 124, 105, 0.32);
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        border-top-right-radius: 30px;
+        background-color: #1f1d2b;
+        box-shadow: 0 -10px 0 0 #252836;
+        right: 0px;
+        bottom: -20px;
+        width: 12px;
+        height: 20px;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        box-shadow: 0 7px 0px 0 #252836;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        background-color: #1f1d2b;
+        /* background: rebeccapurple; */
+        right: 0;
+        top: -20px;
+        width: 15px;
+        height: 20px;
       }
     }
   }
@@ -62,7 +110,6 @@ body {
 }
 .scrolDiv::-webkit-scrollbar {
   width: 5px;
-  /* background-color: red; */
 }
 
 .scrolDiv::-webkit-scrollbar-thumb {

@@ -71,6 +71,10 @@ const useCartStore = create((set) => ({
         totalAmounts: state.totalAmounts,
       };
     }),
+  clearCard: () =>
+    set({
+      data: [],
+    }),
   getCartTotal: () =>
     set((state) => {
       const totalAmounts = state.data.reduce(

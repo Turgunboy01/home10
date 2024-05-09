@@ -11,7 +11,7 @@ const ItemCard = ({ item }) => {
   const { price, img, name, quantity, totalPrice, id } = item;
 
   return (
-    <div className="flex justify-between gap-4 my-[30px]">
+    <div className="flex justify-between gap-4 my-[30px] ">
       <div className="flex-[1] flex flex-col gap-4">
         <div className="flex justify-between">
           <div className="flex gap-2">
@@ -45,7 +45,7 @@ const ItemCard = ({ item }) => {
         </p>
         <button
           onClick={() => handleDelate(id)}
-          className="w-[55px] h-[55px] mt-[5px] border rounded-lg border-[#FF7CA3] text-[#FF7CA3] flex justify-center items-center"
+          className="w-[55px] h-[55px] mt-[5px] border rounded-lg hover:border-[#FF7CA3] border-[#EA7C69] hover:text-[#FF7CA3] text-[#EA7C69] flex justify-center items-center"
         >
           <FaTrash />
         </button>
